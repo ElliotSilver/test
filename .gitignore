@@ -1,0 +1,16 @@
+*.dropbox
+publisher.jar
+.DS_Store
+desktop.ini
+/output
+/temp
+/template
+/fsh-generated
+/input-cache
+_updatePublisher.sh
+_updatePublisher.bat
+_gencontinuous.bat
+_gencontinuous.sh
+*.bat
+*.xsd
+*.code-workspace
