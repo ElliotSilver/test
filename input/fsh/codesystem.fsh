@@ -5,6 +5,13 @@ Description: "A code system where the concepts are in a parent-child hierarchy"
 * ^caseSensitive = true
 // * ^hierarchyMeaning = #grouped-by
 * ^hierarchyMeaning = #is-a
+// * ^filter[+].code = #notSelectable
+// * ^filter[=].description = "filter for notSelectable property"
+// * ^filter[=].operator[+] = #=
+// * ^filter[=].operator[+] = #in
+// * ^filter[=].operator[+] = #not-in
+// * ^filter[=].operator[+] = #exists
+// * ^filter[=].value = "true or false as appropriate for the op"
 * ^property[+].code = #notSelectable
 * ^property[=].uri = http://hl7.org/fhir/concept-properties#notSelectable
 * ^property[=].description = "Indicates that the code is abstract - only intended to be used as a selector for other concepts"
@@ -59,3 +66,12 @@ Description: "A code system where the concepts are categoried by a property"
 * #B2 "B2 display" "B2 meaning"
   * ^property[+].code = #category
   * ^property[=].valueCode = #B
+
+
+Instance: myperson
+InstanceOf: Organization
+Usage: #example
+Title: "foo"
+Description: "bar"
+//* name.given.extension contains http://hl7.org/fhir/StructureDefinition/data-absent-reason
+* name.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#unknown

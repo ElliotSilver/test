@@ -14,7 +14,8 @@ Title: "All concrete concepts defined intensionally by absent notSelectable valu
 Description: """Failure. This ValueSet causes an IG QA error, and no expansion is generated.
 
 This is an attempt to create a concrete values ValueSet. This ValueSet has been created intensionally. However, the desire is to be able to have the expansion of the ValueSet in the IG."""
-* codes from system HierarchicalCodeSystem where notSelectable exists false
+//* codes from system HierarchicalCodeSystem where notSelectable exists false
+* codes from system HierarchicalCodeSystem where notSelectable = "false"
 
 
 ValueSet: HierarchicalIntensionalConcreteConceptsByNotSelectableNotTrueValueSet
@@ -36,6 +37,7 @@ Description: """Failure. The expansion of this ValueSet contains no elements.
 This is an attempt to create a concrete values ValueSet. This ValueSet has been created intensionally."""
 * codes from system HierarchicalCodeSystem
 * exclude codes from system HierarchicalCodeSystem where notSelectable = "true"
+// * codes from system HierarchicalCodeSystem where notSelectable = "true"
 
 
 ValueSet: HierarchicalIntensionalDecendantsOfAValueSet
