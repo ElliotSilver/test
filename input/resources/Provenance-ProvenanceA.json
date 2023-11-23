@@ -1,0 +1,19 @@
+{
+  "resourceType": "Provenance",
+  "id": "ProvenanceA",
+  "target": [
+    {
+      "reference": "Patient/PatientA/_history/22"
+    }
+  ],
+  "agent": [
+    {
+      "who": {
+        "identifier": {
+          "value": "AAAA"
+        }
+      }
+    }
+  ],
+  "recorded": "2023-11-22T17:54:13+08:00"
+}
