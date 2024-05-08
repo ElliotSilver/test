@@ -464,8 +464,21 @@ ValueSet: TocLoincTermsAnsweredByLL6351
 * $LNC#54672-1
 * $LNC#54673-9
 * $LNC#54675-4
-
+* $LNC#77338-2
 
 ValueSet: TocDelLoincTermsAnsweredByLL6351
 * insert DelLoincAnsweredBy(LL6351-2, toc-loinc-answered-by-LL6351-2-vs)
+
+
+ValueSet: LoincAll
+* ^title = "Loinc All"
+* ^description = "Loinc All"
+* ^experimental = false
+* include codes from system http://loinc.org
+
+ValueSet: LoincSubset
+* ^title = "Loinc Subset"
+* ^description = "Loinc Subset"
+* ^experimental = false
+* include codes from valueset toc-loinc-answered-by-LL6351-2-vs and LoincAll
 
