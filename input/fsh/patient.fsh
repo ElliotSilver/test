@@ -4,11 +4,19 @@
 Profile: MyPatient
 Parent: Patient
 Description: "An example profile of the Patient resource."
-* name 1..* MS
+// * name 1..* MS
+* contact
+  * relationship from https://fhir.infoway-inforoute.ca/ValueSet/personalrelationshiproletype
+* maritalStatus from https://healthterminologies.gov.au/fhir/ValueSet/date-accuracy-indicator-1
 
-Instance: PatientExample
-InstanceOf: MyPatient
-Description: "An example of a patient with a license to krill."
-* name
-  * given[0] = "James"
-  * family = "Pond"
+
+ValueSet: MyValueSet
+Description: "HL7 CA valueset"
+Title: "A valueset"
+* include codes from valueset https://fhir.infoway-inforoute.ca/ValueSet/personalrelationshiproletype
+
+ValueSet: MyAUValueSet
+Description: "HL7 AU valueset"
+Title: "An AU valueset"
+* include codes from valueset https://healthterminologies.gov.au/fhir/ValueSet/date-accuracy-indicator-1
+
